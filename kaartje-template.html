@@ -26,14 +26,28 @@
         .resize {
             display: none;
             background: #000;
-            width: 100%;
+            z-index: 101;
+            color: #FFF;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
             height: 100%;
-            z-index: 100;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            font-size: 32pt;
         }
-        @media only screen and (width: 720) {
+        @media screen and (max-width: 720px) {
+            .card {
+                display: none;
+            }
+            body {
+                background: none;
+            }
             .resize {
                 display: block !important;
             }
+
         }
         
         
@@ -42,12 +56,12 @@
 </head>
 <body>
     <div class="resize">
-        Doe dit op een pc!
+        Je kunt helaas dit kaartje alleen bekijken als je een iPad of computer gebruikt!
     </div>
     <div class="card">
         <div class="card-title">Fijne Feestdagen!</div>
         <div class="card-message">
-            Blablabla lorem ipsum dolor sit amet etc.
+            Nog een gelukkig nieuwjaar! Ik wens je nog een zalig kerstfeest, en vandaag is een speciale dag! 2 aardigen jongens hebben dit kaartje speciaal voor je gemaakt!
         </div>
         <div class="afzender">- Koen van Dijk</div>
         <!-- <img src="card-bg.png" alt="bg" class="bg"> -->
