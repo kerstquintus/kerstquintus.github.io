@@ -19,11 +19,6 @@
     box-shadow: 6px 6px 9px 3px rgba(0,0,0,0.75);
 
 }
-body {
-    background-image: url("card-bg.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
 .card-title {
     font-size: 32pt;
 
