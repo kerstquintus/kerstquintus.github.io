@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fijne Feestdagen</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            margin: 0;
+            background-image: url("card-bg.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        center {
+            margin: 8;
+        }
+    </style>
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="snow.css">
+    <style>
+        .resize {
+            display: none;
+            background: #000;
+            z-index: 101;
+            color: #FFF;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            font-size: 32pt;
+        }
+        @media screen and (max-width: 720px) {
+            .card {
+                display: none;
+            }
+            body {
+                background: none;
+            }
+            .resize {
+                display: block !important;
+            }
+
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="resize">
+        Je kunt helaas dit kaartje alleen bekijken als je een iPad of computer gebruikt!
+    </div>
+    <div class="card">
+        <div class="card-title">Prettige Kerstdagen</div>
+        <div class="card-message">
+            en een Gelukkig Nieuwjaar gewenst door
+        </div>
+        <div class="afzender">- Erik-Berndt, Renate en Rianne Scheper</div>
+        <!-- <img src="card-bg.png" alt="bg" class="bg"> -->
+    </div>
+    
+    <div class="winter-is-coming">
+
+        <div class="snow snow--near"></div>
+        <div class="snow snow--near snow--alt"></div>
+
+        <div class="snow snow--mid"></div>
+        <div class="snow snow--mid snow--alt"></div>
+
+        <div class="snow snow--far"></div>
+        <div class="snow snow--far snow--alt"></div>
+    </div>
+
+</body>
+</html>
