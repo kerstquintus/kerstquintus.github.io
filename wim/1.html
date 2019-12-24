@@ -57,8 +57,8 @@
     </style>
 </head>
 <body>
-    <div style="display: none;" id="player"></div>
-    <!-- <div id="player"></div> -->
+    <!-- <div style="display: none;" id="player"></div> -->
+    <div id="player"></div>
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -86,6 +86,7 @@
 
       function onPlayerReady(event) {
         player.getIframe().click();
+        player.getIframe().style.display = "none";
         event.target.playVideo();
       }
     </script>
