@@ -74,7 +74,8 @@
           width: '640',
           videoId: '3PgNPc-iFW8',
           events: {
-            'onReady': onPlayerReady
+            'onReady': onPlayerReady,
+            'onStateChange': repeat
           },
           playerVars: {
               start: 9,
@@ -92,6 +93,14 @@
         }, 1000)
         event.target.playVideo();
       }
+      function repeat(data) {
+        //   console.log(data);
+          if(data.data == 0){
+            // player.playVideo(player.getVideoData().video_id)
+            player.playVideo()
+            player.seekTo(9)
+          }
+      }
     </script>
 
 
@@ -102,6 +111,8 @@
         <div class="card-title">Fijne Feestdagen en een Gelukkig Nieuwjaar!</div>
         <div class="card-message">
             Fijne dagen, en tot zaterdag! Ook nog een fijn nieuwjaar!
+            <br>
+            Koen heeft deze kaart voor je gemaakt!
 
         </div>
         <div class="afzender">- Koen, Tom, Bart en Debbie</div>
