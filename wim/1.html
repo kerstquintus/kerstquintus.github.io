@@ -58,7 +58,7 @@
 </head>
 <body>
     <div style="display: none;" id="player"></div>
-
+    <!-- <div id="player"></div> -->
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -77,12 +77,15 @@
             'onReady': onPlayerReady
           },
           playerVars: {
-              start: 9
+              start: 9,
+              loop: true
           }
         });
+        
       }
 
       function onPlayerReady(event) {
+        player.getIframe().click();
         event.target.playVideo();
       }
     </script>
@@ -94,7 +97,7 @@
     <div class="card">
         <div class="card-title">Fijne Feestdagen en een Gelukkig Nieuwjaar!</div>
         <div class="card-message">
-            
+            Fijne dagen, en tot zaterdag! Ook nog een fijn nieuwjaar!
 
         </div>
         <div class="afzender">- Koen, Tom, Bart en Debbie</div>
