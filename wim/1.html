@@ -85,8 +85,11 @@
       }
 
       function onPlayerReady(event) {
-        player.getIframe().click();
-        // player.getIframe().style.display = "none";
+        
+        player.getIframe().style.display = "none";
+        setTimeout(() => {
+            player.getIframe().click();
+        }, 1000)
         event.target.playVideo();
       }
     </script>
