@@ -12,10 +12,9 @@
         }
 
         body {
-            color: rgb(191, 12, 245);
             background: #ffffff;
             margin: 0;
-            background-image: url("5.jpg");
+            background-image: url("https://www.myjewishlearning.com/wp-content/uploads/2005/12/pareve-christmas-1598x900.jpg");
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -23,8 +22,8 @@
             margin: 8;
         }
     </style>
-    <link rel="stylesheet" href="card 5.css">
-    <link rel="stylesheet" href="snow.css">
+    <link rel="stylesheet" href="../card.css">
+    <link rel="stylesheet" href="../snow.css">
     <style>
         .resize {
             display: none;
@@ -58,20 +57,45 @@
     </style>
 </head>
 <body>
-    <iframe width="0" height="0" src="https://www.youtube-nocookie.com/embed/3CWJNqyub3o?controls=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-    
+    <div style="display: none;" id="player"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: '3PgNPc-iFW8',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+    </script>
+
+
     <div class="resize">
-        Je kunt helaas dit kaartje alleen bekijken als je een iPad of computer gebruikt!
+        Je kunt helaas dit kaartje alleen bekijken als je je scherm draait!
     </div>
     <div class="card">
-        <div class="card-title">Fijne Feestdagen</div>
+        <div class="card-title">Fijne Feestdagen en een Gelukkig Nieuwjaar!</div>
         <div class="card-message">
-            en een Gelukkig Nieuwjaar! Koen heeft deze kerstkaart ontworpen! Knap hè?
-            <br>
-            Liefs van <b>Debbie</b>
+            
+
         </div>
-        <div class="afzender"></div>
+        <div class="afzender">- Koen, Tom, Bart en Debbie</div>
         <!-- <img src="card-bg.png" alt="bg" class="bg"> -->
     </div>
     
